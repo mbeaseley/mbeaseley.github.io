@@ -1,0 +1,40 @@
+.page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+    grid-template-rows: 6vh auto 4vh;
+    grid-template-areas:
+      'header'
+      'main'
+      'footer';
+  background-color: $navy;
+
+  &__header { 
+    background-color: $dark-blue;
+    grid-area: header; 
+  }
+  &__sidebar { 
+    background-color: $dark-blue;
+    grid-area: menu; 
+    display: none;
+  }
+  &__main { 
+    grid-area: main; 
+  }
+  &__footer {
+    background-color: $dark-blue;
+    grid-area: footer; 
+  }
+  @media (min-width: $screen-sm-min) {
+    grid-template-columns: 20vw auto;
+    grid-template-rows: 6vh auto 4vh;
+    grid-template-areas:
+      'menu header'
+      'menu main'
+      'menu footer';
+
+    &__sidebar { 
+      display: unset;
+    }
+  }
+}
