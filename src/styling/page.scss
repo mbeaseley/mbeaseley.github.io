@@ -1,3 +1,9 @@
+%containerLayout  {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
 .page {
   height: 100vh;
   display: grid;
@@ -10,10 +16,12 @@
   background-color: $navy;
 
   &__header { 
+    @extend %containerLayout;
     background-color: $dark-blue;
     grid-area: header; 
   }
-  &__sidebar { 
+  &__sidebar {
+    @extend %containerLayout;
     background-color: $dark-blue;
     grid-area: menu; 
     display: none;
@@ -22,6 +30,8 @@
     grid-area: main; 
   }
   &__footer {
+    @extend %containerLayout;
+    padding: 0;
     background-color: $dark-blue;
     grid-area: footer; 
   }

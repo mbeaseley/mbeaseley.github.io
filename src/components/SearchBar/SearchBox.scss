@@ -1,0 +1,29 @@
+@import '../../styling/variables.scss';
+
+.search-bar {
+  position: relative;
+  padding: 5px 0;
+  border-bottom: 1px solid $grey3;
+
+  &__content {
+    display: inline-block;
+    width: 33ch;
+    color: $grey3;
+
+    > i {
+      margin-right: 7px;
+    }
+
+    > input {
+      color: $grey3;
+      background-color: unset;
+      border: unset;
+      width: 30ch;
+      font: 400 14px Arial, Helvetica, sans-serif;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

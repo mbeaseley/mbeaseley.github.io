@@ -1,18 +1,27 @@
 {
   "projects": [
     {
+      "name": "Project Dashboard",
+      "description": "",
+      "technologies": [],
+      "link": ""
+    },
+    {
       "name": "CCDesign Web Component Library",
       "description": "This project is my second actual live project in production and my first live NPM package. Purpose of this component library was to improve performance and simplify my Angular 7 website. Easy area on ccdesign.me.uk is comprised of this Web Component Library, from the carsouel to the copy.",
+      "technologies": [],
       "link": "https://mbeaseley.github.io/ccdesigns-components/"
     },
     {
       "name": "Personal Website",
       "description": "This project is the first actual live project in production to be viewed. Purpose of my personal website is to act like a CV and a promotion for all further projects created by myself. This project has been through a evolution, using different libraries and packages.",
+      "technologies": [],
       "link": "https://ccdesign.me.uk/"
     },
     {
       "name": "University Final Year Project",
       "description": "My final year project at Brunel University was title 'Using Smartphone technology to simulate human behaviour within an indoor environment'.",
+      "technologies": [],
       "link": "https://assets.ctfassets.net/43i5e5k8e66i/1j26Xbtj2O2EyQ6wEIUggu/924a3bf68c803c3deaf515ea7f1072ea/fyp_uni.pdf"
     }
   ]
