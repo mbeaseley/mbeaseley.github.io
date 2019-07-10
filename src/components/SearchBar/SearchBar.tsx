@@ -7,11 +7,10 @@ interface IProp {
 
 interface IState {
   term: string;
-  parameter: string;
 }
 
 export default class SearchBar extends React.Component<IProp, IState> {
-  state = { term: '', parameter: 'name' }
+  state = { term: '' }
 
   onInputChange = (event: any) => {
     this.setState({ term: event.target.value });
@@ -20,10 +19,6 @@ export default class SearchBar extends React.Component<IProp, IState> {
   onFormSubmit = (event: any) => {
     event.preventDefault();
     this.props.onFormSubmit(this.state.term);
-  }
-
-  onFilterChange = () => {
-    console.log(this.state.parameter);
   }
 
   render() {
