@@ -1,5 +1,6 @@
-import React from 'react';
-import './SearchBox.scss'
+import React, { Component } from 'react';
+import './SearchBox.scss';
+import { ReactComponent as Search } from '../../assets/icons/search.svg';
 
 interface IProp {
   onFormSubmit: any;
@@ -9,7 +10,7 @@ interface IState {
   term: string;
 }
 
-export default class SearchBar extends React.Component<IProp, IState> {
+export default class SearchBar extends Component<IProp, IState> {
   state = { term: '' }
 
   onInputChange = (event: any) => {
@@ -26,7 +27,8 @@ export default class SearchBar extends React.Component<IProp, IState> {
       <div className='search-bar' >
         <form onSubmit={this.onFormSubmit}>
           <div className='search-bar__content'>
-            <i className='fas fa-search' />
+            {/* <i className='fas fa-search' /> */}
+            <Search />
             <input
               type='text'
               placeholder='Search'

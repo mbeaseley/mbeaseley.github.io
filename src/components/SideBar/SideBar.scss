@@ -1,0 +1,59 @@
+@import '../../styling/variables.scss';
+
+.sidebar {
+  position: relative;
+  height: 100%;
+  padding: 5px 0;
+
+  h1 {
+    font: 700 14px Arial, Helvetica, sans-serif;
+    color: $white;
+    text-align: center;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    margin: 50px auto 20px;
+    border-radius: 50%;
+    border: 3px solid $blue;
+  }
+
+  h2, h3 {
+    text-align: center;
+    font: 700 13px Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  h3 {
+    color: $grey1;
+  }
+
+  &__footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    &--icons {
+      display:table;
+      width:100%;
+      table-layout: fixed;
+      color: $grey3;
+
+      > * {
+        display:table-cell;
+        text-align:center;
+      }
+
+      svg {
+        width: 24px;
+        fill: $grey3;
+      }
+    }
+  }
+}

@@ -8,17 +8,28 @@
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
-    grid-template-rows: 6vh auto 4vh;
-    grid-template-areas:
+  grid-template-rows: 6vh auto;
+  grid-template-areas:
       'header'
-      'main'
-      'footer';
+      'main';
   background-color: $navy;
 
   &__header { 
     @extend %containerLayout;
     background-color: $dark-blue;
     grid-area: header; 
+
+
+    &--setting {
+      position: absolute;
+      right: 0;
+      margin: 3px 10px 10px;
+
+      svg {
+        width: 24px;
+        fill: $grey3;
+      }
+    }
   }
   &__sidebar {
     @extend %containerLayout;
@@ -29,19 +40,12 @@
   &__main { 
     grid-area: main; 
   }
-  &__footer {
-    @extend %containerLayout;
-    padding: 0;
-    background-color: $dark-blue;
-    grid-area: footer; 
-  }
   @media (min-width: $screen-sm-min) {
-    grid-template-columns: 20vw auto;
-    grid-template-rows: 6vh auto 4vh;
+    grid-template-columns: minmax(230px, 20vw) auto;
+    grid-template-rows: 6vh auto;
     grid-template-areas:
       'menu header'
-      'menu main'
-      'menu footer';
+      'menu main';
 
     &__sidebar { 
       display: unset;

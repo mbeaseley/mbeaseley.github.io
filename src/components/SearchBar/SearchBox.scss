@@ -10,8 +10,9 @@
     width: 33ch;
     color: $grey3;
 
-    > i {
+    > svg {
       margin-right: 7px;
+      width: 12px;
     }
 
     > input {
@@ -25,5 +26,13 @@
         outline: none;
       }
     }
+  }
+
+  &__setting {
+
+    svg {
+      width: 24px;
+      fill: $grey3;
+    } 
   }
 }
