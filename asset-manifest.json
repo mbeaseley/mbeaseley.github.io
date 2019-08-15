@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.7f0c6298.chunk.css",
-    "main.js": "/static/js/main.2ffe95a1.chunk.js",
-    "main.js.map": "/static/js/main.2ffe95a1.chunk.js.map",
+    "main.css": "/static/css/main.0c985f4a.chunk.css",
+    "main.js": "/static/js/main.b4f4dc28.chunk.js",
+    "main.js.map": "/static/js/main.b4f4dc28.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.58edc009.js",
     "runtime~main.js.map": "/static/js/runtime~main.58edc009.js.map",
     "static/js/2.7b19acea.chunk.js": "/static/js/2.7b19acea.chunk.js",
@@ -56,9 +56,9 @@
     "static/js/26.5c03adb0.chunk.js": "/static/js/26.5c03adb0.chunk.js",
     "static/js/26.5c03adb0.chunk.js.map": "/static/js/26.5c03adb0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8a4907f5ddba381d00f0355277faee1e.js": "/precache-manifest.8a4907f5ddba381d00f0355277faee1e.js",
+    "precache-manifest.dd5f4b4e8d833743482f3ab908dc08b2.js": "/precache-manifest.dd5f4b4e8d833743482f3ab908dc08b2.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.7f0c6298.chunk.css.map": "/static/css/main.7f0c6298.chunk.css.map",
+    "static/css/main.0c985f4a.chunk.css.map": "/static/css/main.0c985f4a.chunk.css.map",
     "static/media/AWS.svg": "/static/media/AWS.65750278.svg",
     "static/media/Angular.svg": "/static/media/Angular.07486278.svg",
     "static/media/Azure Pipelines.svg": "/static/media/Azure Pipelines.d3c65f57.svg",
@@ -86,7 +86,6 @@
     "static/media/github.8a1ba32d.svg": "/static/media/github.8a1ba32d.svg",
     "static/media/linkedin.8dc04bcd.svg": "/static/media/linkedin.8dc04bcd.svg",
     "static/media/search.c6a0effb.svg": "/static/media/search.c6a0effb.svg",
-    "static/media/settings.326d34b4.svg": "/static/media/settings.326d34b4.svg",
     "static/media/twitter.3ee3ca38.svg": "/static/media/twitter.3ee3ca38.svg"
   }
 }
