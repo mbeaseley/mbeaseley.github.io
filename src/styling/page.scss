@@ -16,7 +16,7 @@
 
   &__header { 
     @extend %containerLayout;
-    background-color: $dark-blue;
+    // background-color: $dark-blue;
     grid-area: header; 
 
 
@@ -34,8 +34,10 @@
   &__sidebar {
     @extend %containerLayout;
     background-color: $dark-blue;
+    border-right: 3px solid $black;
     grid-area: menu; 
     display: none;
+    box-shadow: none;
   }
   &__main { 
     grid-area: main;

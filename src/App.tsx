@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import SearchBar from './components/SearchBar/SearchBar';
 import ProfileCard from './components/SideBar/SideBar';
-import { ReactComponent as Settings } from './assets/icons/settings.svg';
+// import { ReactComponent as Settings } from './assets/icons/Settings.svg';
 import ProductCard from './components/ProductCard/ProductCard';
+import Separator from './components/Separator/Separator';
 
 interface iProp {
   name: string;
@@ -48,8 +49,8 @@ export default class App extends React.Component {
     return (
       <div className="page" >
         <div className="page__header">
-          <SearchBar onFormSubmit={this.onTermSubmit} visible={true} />
-          <a href='/' className='page__header--setting'><Settings /></a>
+          <SearchBar onFormSubmit={this.onTermSubmit} visible={false} />
+          {/* <a href='/' className='page__header--setting'><Settings /></a> */}
         </div>
         <div className="page__sidebar">
           <ProfileCard />
