@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/icons/Contentful.svg"],"names":["module","exports","__webpack_require__","p"],"mappings":"4EAAAA,EAAAC,QAAiBC,EAAAC,EAAuB","file":"static/js/8.7fbad729.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/Contentful.9e764792.svg\";"],"sourceRoot":""}
