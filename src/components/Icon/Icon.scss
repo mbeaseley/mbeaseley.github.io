@@ -1,0 +1,12 @@
+@import '../../styling/variables.scss';
+
+.icon {
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  
+  &--white-bg {
+    background-color: $white;
+    border-radius: 25px;
+  }
+
+}

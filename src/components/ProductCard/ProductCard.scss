@@ -1,0 +1,38 @@
+@import '../../styling/variables.scss';
+
+.product-card {
+  display: block;
+  padding: 10px;
+  margin: 30px 40px 30px;
+  background-color: $dark-blue;
+  border: 3px solid $black;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out 0s;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: none;
+  }
+
+  &__name {
+    display: block;
+    margin: 20px;
+    font: 700 14px Arial, Helvetica, sans-serif;
+    color: $white;
+  }
+
+  &__description {
+    display: block;
+    margin: 20px;
+    font: 400 14px Arial, Helvetica, sans-serif;
+    color: $grey1;
+  }
+
+  &__technologies {
+    display: block;
+    margin: 20px;
+    font: 400 14px Arial, Helvetica, sans-serif;
+    color: $grey1;
+  }
+}

@@ -38,10 +38,12 @@
     display: none;
   }
   &__main { 
-    grid-area: main; 
+    grid-area: main;
+    padding: 10px;
+    overflow: scroll;
   }
   @media (min-width: $screen-sm-min) {
-    grid-template-columns: minmax(230px, 20vw) auto;
+    grid-template-columns: minmax(230px, 15vw) auto;
     grid-template-rows: 6vh auto;
     grid-template-areas:
       'menu header'

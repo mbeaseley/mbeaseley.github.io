@@ -4,6 +4,7 @@ import { ReactComponent as Search } from '../../assets/icons/search.svg';
 
 interface IProp {
   onFormSubmit: any;
+  visible?:boolean;
 }
 
 interface IState {
@@ -24,10 +25,9 @@ export default class SearchBar extends Component<IProp, IState> {
 
   render() {
     return (
-      <div className='search-bar' >
+      <div className={(this.props.visible) ? 'hide' : 'search-bar' } >
         <form onSubmit={this.onFormSubmit}>
           <div className='search-bar__content'>
-            {/* <i className='fas fa-search' /> */}
             <Search />
             <input
               type='text'
