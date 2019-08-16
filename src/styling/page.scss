@@ -1,7 +1,6 @@
 %containerLayout  {
   display: flex;
   align-items: center;
-  padding: 20px;
 }
 
 .page {
@@ -16,8 +15,8 @@
 
   &__header { 
     @extend %containerLayout;
-    // background-color: $dark-blue;
     grid-area: header; 
+    padding: 20px 50px 20px;
 
 
     &--setting {
@@ -38,6 +37,7 @@
     grid-area: menu; 
     display: none;
     box-shadow: none;
+    padding: 20px;
   }
   &__main { 
     grid-area: main;

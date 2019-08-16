@@ -35,4 +35,8 @@
     font: 400 14px Arial, Helvetica, sans-serif;
     color: $grey1;
   }
+
+  &:first-of-type  {
+    margin-top: 0;
+  }
 }

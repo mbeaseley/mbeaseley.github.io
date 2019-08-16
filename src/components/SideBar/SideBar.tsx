@@ -3,9 +3,9 @@ import './SideBar.scss'
 import profile from '../../assets/profile.jpg';
 import Separator from '../Separator/Separator';
 // import Button from '../Button/Button';
-import { ReactComponent as Github } from '../../assets/icons/github.svg';
-import { ReactComponent as Linkedin } from '../../assets/icons/linkedin.svg';
-import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
+import { ReactComponent as Github } from '../../assets/icons/Github.svg';
+import { ReactComponent as Linkedin } from '../../assets/icons/Linkedin.svg';
+import { ReactComponent as Twitter } from '../../assets/icons/Twitter.svg';
 
 export default class SideBar extends React.Component {
   render() {
@@ -15,6 +15,7 @@ export default class SideBar extends React.Component {
         <img src={profile} alt='profile' />
         <h2>Michael Beaseley</h2>
         <h3>Full Stack Developer</h3>
+        <Separator />
         <div className="sidebar__footer">
           <Separator />
           <div className="sidebar__footer--icons">

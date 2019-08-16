@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './SearchBox.scss';
-import { ReactComponent as Search } from '../../assets/icons/search.svg';
+import { ReactComponent as Search } from '../../assets/icons/Search.svg';
 
 interface IProp {
   onFormSubmit: any;
+  onInputChange: any;
   visible?:boolean;
 }
 
@@ -16,6 +17,7 @@ export default class SearchBar extends Component<IProp, IState> {
 
   onInputChange = (event: any) => {
     this.setState({ term: event.target.value });
+    this.props.onInputChange(event.target.value);
   }
 
   onFormSubmit = (event: any) => {
@@ -26,7 +28,7 @@ export default class SearchBar extends Component<IProp, IState> {
   render() {
     return (
       <div className={(this.props.visible) ? 'hide' : 'search-bar' } >
-        <form onSubmit={this.onFormSubmit}>
+        <form onSubmit={this.onFormSubmit} onChange={this.onInputChange}>
           <div className='search-bar__content'>
             <Search />
             <input
