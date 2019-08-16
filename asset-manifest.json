@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c985f4a.chunk.css",
-    "main.js": "/static/js/main.b4f4dc28.chunk.js",
-    "main.js.map": "/static/js/main.b4f4dc28.chunk.js.map",
+    "main.css": "/static/css/main.7c8ed934.chunk.css",
+    "main.js": "/static/js/main.57709c59.chunk.js",
+    "main.js.map": "/static/js/main.57709c59.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.58edc009.js",
     "runtime~main.js.map": "/static/js/runtime~main.58edc009.js.map",
-    "static/js/2.7b19acea.chunk.js": "/static/js/2.7b19acea.chunk.js",
-    "static/js/2.7b19acea.chunk.js.map": "/static/js/2.7b19acea.chunk.js.map",
+    "static/js/2.221af095.chunk.js": "/static/js/2.221af095.chunk.js",
+    "static/js/2.221af095.chunk.js.map": "/static/js/2.221af095.chunk.js.map",
     "static/js/3.42973aa8.chunk.js": "/static/js/3.42973aa8.chunk.js",
     "static/js/3.42973aa8.chunk.js.map": "/static/js/3.42973aa8.chunk.js.map",
     "static/js/4.b1e1b8c2.chunk.js": "/static/js/4.b1e1b8c2.chunk.js",
@@ -56,9 +56,9 @@
     "static/js/26.5c03adb0.chunk.js": "/static/js/26.5c03adb0.chunk.js",
     "static/js/26.5c03adb0.chunk.js.map": "/static/js/26.5c03adb0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.dd5f4b4e8d833743482f3ab908dc08b2.js": "/precache-manifest.dd5f4b4e8d833743482f3ab908dc08b2.js",
+    "precache-manifest.ca7342477eb40b38b7ea8e72d1bad191.js": "/precache-manifest.ca7342477eb40b38b7ea8e72d1bad191.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.0c985f4a.chunk.css.map": "/static/css/main.0c985f4a.chunk.css.map",
+    "static/css/main.7c8ed934.chunk.css.map": "/static/css/main.7c8ed934.chunk.css.map",
     "static/media/AWS.svg": "/static/media/AWS.65750278.svg",
     "static/media/Angular.svg": "/static/media/Angular.07486278.svg",
     "static/media/Azure Pipelines.svg": "/static/media/Azure Pipelines.d3c65f57.svg",
@@ -82,10 +82,6 @@
     "static/media/Typescript.svg": "/static/media/Typescript.ab032f4f.svg",
     "static/media/Web Components.svg": "/static/media/Web Components.f995f754.svg",
     "static/media/Webpack.svg": "/static/media/Webpack.1310ad87.svg",
-    "static/media/Yarn.svg": "/static/media/Yarn.c82b8bb8.svg",
-    "static/media/github.8a1ba32d.svg": "/static/media/github.8a1ba32d.svg",
-    "static/media/linkedin.8dc04bcd.svg": "/static/media/linkedin.8dc04bcd.svg",
-    "static/media/search.c6a0effb.svg": "/static/media/search.c6a0effb.svg",
-    "static/media/twitter.3ee3ca38.svg": "/static/media/twitter.3ee3ca38.svg"
+    "static/media/Yarn.svg": "/static/media/Yarn.c82b8bb8.svg"
   }
 }
