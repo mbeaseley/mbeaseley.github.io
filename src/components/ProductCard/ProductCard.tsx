@@ -4,9 +4,9 @@ import Icon from '../Icon/Icon';
 
 interface iProp {
   name: string;
-  description: string;
-  technologies: any;
-  link: string;
+  description?: string;
+  technologies?: any;
+  link?: string;
 }
 
 interface iconProps {
@@ -15,6 +15,9 @@ interface iconProps {
 
 export default class ProductCard extends Component<iProp, any> {
   renderIcon() {
+    if (!this.props.technologies) {
+      return null;
+    }
     const icons = this.props.technologies.map((icon: iconProps, index: number) => {
       return <Icon key={index} name={icon.toString()} />
     })

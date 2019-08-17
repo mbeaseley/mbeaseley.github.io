@@ -43,6 +43,15 @@
     grid-area: main;
     padding: 10px;
     overflow: scroll;
+
+    &--no-content {
+      display: block;
+      width: 100%;
+      font: 400 14px Arial, Helvetica, sans-serif;
+      color: $grey1;
+      text-align: center;
+      
+    }
   }
   @media (min-width: $screen-sm-min) {
     grid-template-columns: minmax(230px, 15vw) auto;

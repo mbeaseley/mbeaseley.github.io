@@ -16,12 +16,12 @@ export default class App extends React.Component {
 
   onInputChange = async (term: string) => {
     const value = await term;
-    await this.setState({searchquery: value})
+    await this.setState({ searchquery: value })
   }
 
   onTermSubmit = async (term: string) => {
     const value = await term;
-    await this.setState({searchquery: value})
+    await this.setState({ searchquery: value })
   };
 
   componentWillMount() {
@@ -56,14 +56,18 @@ export default class App extends React.Component {
   renderProjects() {
     const projects = this.findSearchResults().map((project: iProp, index) => {
       return (
-        <ProductCard 
-          key={index} 
-          name={project.name} 
-          description={project.description} 
+        <ProductCard
+          key={index}
+          name={project.name}
+          description={project.description}
           technologies={project.technologies}
           link={project.link} />
       )
     })
+
+    if (projects.length === 0 && this.state.searchquery.length > 0) {
+      return <ProductCard name="No Content For This Search" />
+    }
     return projects;
   }
 
@@ -77,9 +81,8 @@ export default class App extends React.Component {
           <ProfileCard />
         </div>
         <div className="page__main">
-          {
-            this.renderProjects()
-          }
+          {this.renderProjects()}
+          
         </div>
       </div>
     );
