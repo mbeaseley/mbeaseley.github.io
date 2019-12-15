@@ -19,7 +19,7 @@ export default class ProductCard extends Component<iProp, any> {
       return null;
     }
     const icons = this.props.technologies.map((icon: iconProps, index: number) => {
-      return <Icon key={index} name={icon.toString()} />
+      return <Icon key={index} name={icon.toString()} isLabel={true}/>
     })
     return icons;
   }

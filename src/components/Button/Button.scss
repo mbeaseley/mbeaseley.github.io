@@ -1,0 +1,26 @@
+@import '../../styling/variables';
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    
+    // Sizing 
+    &--medium {
+        @extend %heading;
+        font-weight: $font-weight--medium;
+        font-size: $font-size--small;
+    }
+
+    // Button type
+    &--primary {
+        border: 3px solid $black;
+        background-color: $grey1;
+        color: $black;
+    }
+}
