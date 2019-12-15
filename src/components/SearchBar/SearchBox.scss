@@ -1,4 +1,4 @@
-@import '../../styling/variables.scss';
+@import '../../styling/variables';
 
 .search-bar {
   position: relative;
@@ -16,11 +16,13 @@
     }
 
     > input {
+      @extend %heading;
+      font-size: $font-size--small;
+      font-weight: $font-weight;
       color: $grey3;
       background-color: unset;
       border: unset;
       width: 30ch;
-      font: 400 14px Arial, Helvetica, sans-serif;
 
       &:focus {
         outline: none;

@@ -1,4 +1,4 @@
-@import '../../styling/variables.scss';
+@import '../../styling/variables';
 
 .product-card {
   display: block;
@@ -16,23 +16,29 @@
   }
 
   &__name {
+    @extend %heading;
+    font-size: $font-size--small;
+    font-weight: $font-weight--bold;
     display: block;
     margin: 20px;
-    font: 700 14px Arial, Helvetica, sans-serif;
     color: $white;
   }
 
   &__description {
+    @extend %heading;
+    font-size: $font-size--small;
+    font-weight: $font-weight;
     display: block;
     margin: 20px;
-    font: 400 14px Arial, Helvetica, sans-serif;
     color: $grey1;
   }
 
   &__technologies {
+    @extend %heading;
+    font-size: $font-size--small;
+    font-weight: $font-weight;
     display: block;
     margin: 20px;
-    font: 400 14px Arial, Helvetica, sans-serif;
     color: $grey1;
   }
 

@@ -24,7 +24,7 @@ export default class App extends React.Component {
     await this.setState({ searchquery: value })
   };
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('/project.json')
       .then(response => {
         this.setState({
