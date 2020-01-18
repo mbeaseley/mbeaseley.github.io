@@ -14,7 +14,7 @@ interface iconProps {
 }
 
 export default class ProductCard extends Component<iProp, any> {
-  renderIcon() {
+  renderIcon(): React.FC<iconProps> | null {
     if (!this.props.technologies) {
       return null;
     }

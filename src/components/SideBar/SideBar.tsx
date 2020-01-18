@@ -3,7 +3,6 @@ import './SideBar.scss'
 import profile from '../../assets/profile.jpg';
 import Separator from '../Separator/Separator';
 import SettingModal from '../SettingModal/SettingModal';
-// import Button from '../Button/Button';
 import { ReactComponent as Github } from '../../assets/icons/Github.svg';
 import { ReactComponent as Linkedin } from '../../assets/icons/Linkedin.svg';
 import { ReactComponent as Twitter } from '../../assets/icons/Twitter.svg';
@@ -11,11 +10,11 @@ import { ReactComponent as Twitter } from '../../assets/icons/Twitter.svg';
 export default class SideBar extends React.Component {
   state = { modal: false };
 
-  showModal (): any {
+  showModal (): void {
     this.setState({modal: true})
   }
 
-  hideModal(): any {
+  hideModal(): void {
     this.setState({modal: false})
   }
 

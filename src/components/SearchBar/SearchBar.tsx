@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import './SearchBox.scss';
 import { ReactComponent as Search } from '../../assets/icons/Search.svg';
 
-interface IProp {
+interface searchProp {
   onFormSubmit: any;
   onInputChange: any;
   visible?:boolean;
 }
 
-interface IState {
+interface searchState {
   term: string;
 }
 
-export default class SearchBar extends Component<IProp, IState> {
+export default class SearchBar extends Component<searchProp, searchState> {
   state = { term: '' }
 
   onInputChange = (event: any) => {

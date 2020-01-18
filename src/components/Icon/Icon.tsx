@@ -12,10 +12,10 @@ const Icon: FC<iconProps> = ({name, isLabel}) => {
     setImg(icon.default);
   })
   .catch((error) => {
-    console.warn(error);
+    console.error(error);
   });
 
-  const addWhiteBg = (name.includes('Stencil')) ? "icon--white-bg": "";
+  const addWhiteBg = (name.includes('Stencil')) ? 'icon--white-bg': null;
 
   return (
     <div className='icon'>
