@@ -15,7 +15,7 @@ export default class SideBar extends React.Component {
     this.setState({modal: true})
   }
 
-  hideModal(): void {
+  hideModal(): any {
     this.setState({modal: false})
   }
 
@@ -43,7 +43,7 @@ export default class SideBar extends React.Component {
             </div>
           </div>
         </div>
-        <SettingModal show={this.state.modal}></SettingModal>
+        <SettingModal show={this.state.modal} close={() => this.hideModal()}></SettingModal>
       </div>
     );
   }

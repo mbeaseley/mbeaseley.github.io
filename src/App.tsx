@@ -3,6 +3,8 @@ import axios from 'axios';
 import SearchBar from './components/SearchBar/SearchBar';
 import ProfileCard from './components/SideBar/SideBar';
 import ProductCard from './components/ProductCard/ProductCard';
+import { ReactComponent as Settings } from './assets/icons/Settings.svg';
+import SettingModal from './components/SettingModal/SettingModal';
 
 interface iProp {
   name: string;
@@ -12,7 +14,7 @@ interface iProp {
 }
 
 export default class App extends React.Component {
-  state = { projectList: [], searchquery: '' };
+  state = { projectList: [], searchquery: '', modal: false };
 
   onInputChange = async (term: string) => {
     const value = await term;
@@ -36,7 +38,7 @@ export default class App extends React.Component {
       });
   }
 
-  findSearchResults() {
+  findSearchResults(): never[] {
     if (this.state.searchquery.length === 0) {
       return this.state.projectList;
     }
@@ -53,7 +55,7 @@ export default class App extends React.Component {
     return searchProjects;
   }
 
-  renderProjects() {
+  renderProjects(): JSX.Element[] | JSX.Element {
     const projects = this.findSearchResults().map((project: iProp, index) => {
       return (
         <ProductCard
@@ -76,6 +78,12 @@ export default class App extends React.Component {
       <div className="page" >
         <div className="page__header">
           <SearchBar onFormSubmit={this.onTermSubmit} onInputChange={this.onInputChange} visible={false} />
+          <button 
+            className="button button--medium button--color-grey button--text" 
+            type="button" 
+            onClick={() => this.setState({modal: true})}>
+            <Settings />
+          </button>
         </div>
         <div className="page__sidebar">
           <ProfileCard />
@@ -84,6 +92,7 @@ export default class App extends React.Component {
           {this.renderProjects()}
           
         </div>
+        <SettingModal show={this.state.modal} close={() => this.setState({modal: false})}></SettingModal>
       </div>
     );
   }

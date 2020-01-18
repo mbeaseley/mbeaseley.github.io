@@ -19,18 +19,24 @@
         display: none;
     }
 
-    &__body {
-        height: 80vh;
-        width: 80vh;
-        border: 3px solid $black;
+    &__content {
+        min-height: 60vh;
+        min-width: 500px;
+        border: $space-xs solid $black;
         background-color: $dark-blue;
+
+        @media screen and (max-width: $screen-xs-max) {
+            min-width: auto;
+            width: 100vw;
+            height: 99vh;
+        }
     }
 
     &__header {
-        display: inline-flex;
+        display: flex;
         justify-content: space-between;
-        width: 100%;
-        margin-top: 20px;
+        align-items: center;
+        padding: $space $space-s $space-sm;
 
         h1 {
             @extend %heading;
@@ -43,8 +49,8 @@
 
         &--placeholder,
         button {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             margin: 0;
         }
     }

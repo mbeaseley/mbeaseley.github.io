@@ -15,18 +15,20 @@
 
   &__header { 
     @extend %containerLayout;
+    display: flex;
+    justify-content: space-between;
     grid-area: header; 
-    padding: 20px 50px 20px;
+    padding: $space $space-xl;
 
+    @media screen and (max-width: $screen-xs-max) {
+      padding: $space-s $space-ml 0;
+    }
 
-    &--setting {
-      position: absolute;
-      right: 0;
-      margin: 3px 10px 10px;
+    & > button {
+      padding: 0;
 
-      svg {
-        width: 24px;
-        fill: $grey3;
+      @media screen and (min-width: $screen-xs-max) {
+        display: none;
       }
     }
   }

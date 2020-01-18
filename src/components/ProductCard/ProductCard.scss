@@ -3,12 +3,16 @@
 .product-card {
   display: block;
   padding: 10px;
-  margin: 30px 40px 30px;
+  margin: $space-ml;
   background-color: $dark-blue;
   border: 3px solid $black;
   text-align: center;
   text-decoration: none;
   transition: all 0.4s ease-in-out 0s;
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin: $space-m;
+  }
 
   &:hover {
     transform: scale(1.04);

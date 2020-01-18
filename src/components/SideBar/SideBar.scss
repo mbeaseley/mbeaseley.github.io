@@ -38,6 +38,10 @@
       border-radius: 50%;
       border: 3px solid $blue;
     }
+
+    & > button {
+      padding: $space-xs $space-sm;
+    }
   }
 
   h2, h3 {
