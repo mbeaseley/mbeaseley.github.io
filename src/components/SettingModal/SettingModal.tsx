@@ -24,7 +24,12 @@ export default class SettingModal extends Component<ModalProps, any> {
               </button>
             </div>
             <div className='modal__body'>
-              
+              <h2>THEME</h2>
+              <div className="modal__theme">
+                <div className="modal__theme-container"></div>
+                <div className="modal__theme-container"></div>
+                <div className="modal__theme-container"></div>
+              </div>
             </div>
           </div>
         </div>

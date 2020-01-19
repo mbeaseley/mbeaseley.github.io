@@ -75,7 +75,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="page" >
+      <div className={this.state.modal ? 'page page--blackout' : 'page'} >
         <div className="page__header">
           <SearchBar onFormSubmit={this.onTermSubmit} onInputChange={this.onInputChange} visible={false} />
           <button 

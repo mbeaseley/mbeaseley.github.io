@@ -22,7 +22,7 @@
     &__content {
         min-height: 60vh;
         min-width: 500px;
-        border: $space-xs solid $black;
+        border: 4px solid $black;
         background-color: $dark-blue;
 
         @media screen and (max-width: $screen-xs-max) {
@@ -39,9 +39,6 @@
         padding: $space $space-s $space-sm;
 
         h1 {
-            @extend %heading;
-            font-size: $font-size--large;
-            font-weight: $font-weight--bold;
             color: $white;
             text-align: center;
             margin: 0;
@@ -52,6 +49,36 @@
             width: 30px;
             height: 30px;
             margin: 0;
+        }
+    }
+
+    &__body {
+        padding: $space-sm $space-m $space;
+        color: $white;
+
+        @media screen and (max-width: $screen-xs-max) {
+            overflow: scroll;
+            height: 85vh;
+        }
+    }
+
+    &__theme {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 12px;
+
+        @media screen and (max-width: $screen-xs-max) {
+            grid-auto-flow: row; 
+        }
+    }
+
+    &__theme-container {
+        height: 200px;
+        border: 4px solid $black;
+
+        @media screen and (max-width: $screen-xs-max) {
+            height: 400px;
+            padding: $space-xs;
         }
     }
 }

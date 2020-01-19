@@ -24,9 +24,7 @@
     padding: 5px 0;
 
     & > h1 {
-      @extend %heading;
       font-size: $font-size--small;
-      font-weight: $font-weight--bold;
       color: $white;
       text-align: center;
       margin: 0;
@@ -45,9 +43,7 @@
   }
 
   h2, h3 {
-    @extend %heading;
     font-size: $font-size--extra-small;
-    font-weight: $font-weight--bold;
     text-align: center;
     margin: 0;
     margin-bottom: 5px;
