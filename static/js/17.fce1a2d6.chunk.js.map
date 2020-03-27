@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/icons/Sass.svg"],"names":["module","exports","__webpack_require__","p"],"mappings":"6EAAAA,EAAAC,QAAiBC,EAAAC,EAAuB","file":"static/js/17.fce1a2d6.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/Sass.d7b8a779.svg\";"],"sourceRoot":""}
