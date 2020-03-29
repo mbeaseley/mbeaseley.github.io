@@ -42,5 +42,9 @@
     &--text {
         border: none;
         background: transparent;
-    }   
+    }
+
+    &--none {
+        display: none;
+    }
 }

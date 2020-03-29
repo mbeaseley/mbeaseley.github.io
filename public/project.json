@@ -1,5 +1,11 @@
 [
   {
+    "name": "My Spotify Stats",
+    "description": "This project is a useful tool for seeing the spotify user top listened to tracks, artists and recently played songs.",
+    "technologies": ["Angular", "Typescript", "Sass", "NPM", "Spotify"],
+    "link": "https://mbeaseley.github.io/my-spotify-stats"
+  },
+  {
     "name": "Project Dashboard",
     "description": "This project is dashboard and home of analysts for any project created by Michael Beaseley. Will display graphical charts relate code smell and much more.",
     "technologies": ["React", "Typescript", "Sass", "Yarn"],

@@ -29,7 +29,7 @@ export default class SideBar extends React.Component {
             <h3>Full Stack Developer</h3>
             <Separator />
             <button 
-              className="button button--medium button--primary" 
+              className="button button--medium button--primary button--none" 
               type="button" 
               onClick={() => this.showModal()}>
               Settings
