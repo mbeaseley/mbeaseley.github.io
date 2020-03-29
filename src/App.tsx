@@ -5,6 +5,7 @@ import ProfileCard from './components/SideBar/SideBar';
 import ProductCard from './components/ProductCard/ProductCard';
 import { ReactComponent as Settings } from './assets/icons/Settings.svg';
 import SettingModal from './components/SettingModal/SettingModal';
+import SplashScreen from './components/SplashScreen/SplashScreen';
 
 interface iProp {
   name: string;
@@ -76,6 +77,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={this.state.modal ? 'page page--blackout' : 'page'} >
+        <SplashScreen />
         <div className="page__header">
           <SearchBar onFormSubmit={this.onTermSubmit} onInputChange={this.onInputChange} visible={false} />
           <button 
