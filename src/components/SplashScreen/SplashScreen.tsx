@@ -22,6 +22,7 @@ export default class SplashScreen extends Component<any, any> {
       <div className="splash-screen">
         <div className="splash-screen__container">
           <Icon key="logo" name="Project-logo" isLabel={false}/>
+          <h1>Project Dashboard</h1>
         </div>
       </div>
     )

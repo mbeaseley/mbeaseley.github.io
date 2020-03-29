@@ -31,7 +31,7 @@
   background-color: $dark-blue;
 
   &--fadeout {
-    animation: mainfadeout 0.5s;
+    animation: mainfadeout 0.3s;
     animation-fill-mode: forwards;
   }
 
@@ -41,6 +41,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     animation: fadein 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
 
     &--fadeout {
       animation: fadeout 2s;
