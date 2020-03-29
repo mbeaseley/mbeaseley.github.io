@@ -1,2 +1,0 @@
-(this["webpackJsonpmbeaseley.github.io"]=this["webpackJsonpmbeaseley.github.io"]||[]).push([[6],{57:function(e,s,i){e.exports=i.p+"static/media/Azure.a1d1d746.svg"}}]);
-//# sourceMappingURL=6.3d4bc4cb.chunk.js.map
