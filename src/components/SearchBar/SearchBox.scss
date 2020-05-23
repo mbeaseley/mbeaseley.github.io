@@ -3,27 +3,35 @@
 .search-bar {
   position: relative;
   padding: 5px 0;
-  border-bottom: 1px solid $grey3;
+  border-bottom: 1px solid $grey1;
 
   &__content {
     display: inline-block;
     width: 33ch;
-    color: $grey3;
+    color: $grey1;
 
     > svg {
       margin-right: 7px;
       width: 12px;
     }
 
-    > input {
+    > label, > input {
       @extend %heading;
       font-size: $font-size--small;
       font-weight: $font-weight;
-      color: $grey3;
+      color: $grey1;
       background-color: unset;
       border: unset;
       width: 30ch;
+      height: 18px;
+    }
 
+    > label {
+      position: absolute;
+      top: 7px;
+    }
+
+    > input {
       &:focus {
         outline: none;
       }
@@ -33,7 +41,7 @@
   &__setting {
     svg {
       width: 24px;
-      fill: $grey3;
-    } 
+      fill: $grey1;
+    }
   }
 }

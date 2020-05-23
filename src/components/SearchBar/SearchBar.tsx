@@ -10,10 +10,11 @@ interface searchProp {
 
 interface searchState {
   term: string;
+  focused: boolean;
 }
 
 export default class SearchBar extends Component<searchProp, searchState> {
-  state = { term: '' }
+  state = { term: '', focused: false }
 
   onInputChange = (event: any) => {
     this.setState({ term: event.target.value });
@@ -26,14 +27,17 @@ export default class SearchBar extends Component<searchProp, searchState> {
   }
 
   render() {
+    const label = !this.state.term.length ? (<label htmlFor='search'>Search</label> ) : null;
+
     return (
       <div className={(this.props.visible) ? 'hide' : 'search-bar' } >
         <form onSubmit={this.onFormSubmit} onChange={this.onInputChange}>
           <div className='search-bar__content'>
             <Search />
+            {label}
             <input
+              id='search'
               type='text'
-              placeholder='Search'
               value={this.state.term}
               onChange={this.onInputChange} />
           </div>

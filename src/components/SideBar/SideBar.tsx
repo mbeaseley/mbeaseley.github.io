@@ -28,18 +28,18 @@ export default class SideBar extends React.Component {
             <h2>Michael Beaseley</h2>
             <h3>Full Stack Developer</h3>
             <Separator />
-            <button 
-              className="button button--medium button--primary button--none" 
-              type="button" 
+            <button
+              className="button button--medium button--primary button--none"
+              type="button"
               onClick={() => this.showModal()}>
               Settings
             </button>
             <div className="sidebar__footer">
               <Separator />
               <div className="sidebar__footer--icons">
-                <a href='https://github.com/mbeaseley'><Github /></a>
-                <a href='https://www.linkedin.com/in/michael-beaseley-817b5a101/'><Linkedin /></a>
-                <a href='https://twitter.com/MTBeaseley'><Twitter /></a>
+                <a href='https://github.com/mbeaseley' aria-label='github'><Github /></a>
+                <a href='https://www.linkedin.com/in/michael-beaseley-817b5a101/' aria-label='linkedin'><Linkedin /></a>
+                <a href='https://twitter.com/MTBeaseley' aria-label='twitter'><Twitter /></a>
               </div>
             </div>
           </div>
