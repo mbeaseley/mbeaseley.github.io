@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/icons/settings.svg"],"names":["module","exports"],"mappings":"qHAAAA,EAAOC,QAAU,IAA0B","file":"static/js/28.4699235b.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/settings.326d34b4.svg\";"],"sourceRoot":""}

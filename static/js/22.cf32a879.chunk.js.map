@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/icons/Spotify.svg"],"names":["module","exports"],"mappings":"qHAAAA,EAAOC,QAAU,IAA0B","file":"static/js/22.cf32a879.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/Spotify.9fa7aede.svg\";"],"sourceRoot":""}
