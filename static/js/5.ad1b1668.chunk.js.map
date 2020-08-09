@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets/icons/azure-pipelines.svg"],"names":["module","exports"],"mappings":"oHAAAA,EAAOC,QAAU,IAA0B","file":"static/js/5.ad1b1668.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/azure-pipelines.d3c65f57.svg\";"],"sourceRoot":""}
