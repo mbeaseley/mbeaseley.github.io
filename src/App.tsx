@@ -3,7 +3,7 @@ import axios from 'axios';
 import SearchBar from './components/SearchBar/SearchBar';
 import ProfileCard from './components/SideBar/SideBar';
 import ProductCard from './components/ProductCard/ProductCard';
-import { ReactComponent as Settings } from './assets/icons/Settings.svg';
+import { ReactComponent as Settings } from './assets/icons/settings.svg';
 import SettingModal from './components/SettingModal/SettingModal';
 import SplashScreen from './components/SplashScreen/SplashScreen';
 
@@ -17,26 +17,25 @@ interface iProp {
 export default class App extends React.Component {
   state = { projectList: [], searchquery: '', modal: false };
 
-  onInputChange = async (term: string) => {
-    const value = await term;
-    await this.setState({ searchquery: value })
-  }
-
-  onTermSubmit = async (term: string) => {
-    const value = await term;
-    await this.setState({ searchquery: value })
+  onInputChange = async (term: string): Promise<void> => {
+    const value = term;
+    return this.setState({ searchquery: value });
   };
 
-  componentDidMount() {
-    axios.get('/project.json')
-      .then(response => {
-        this.setState({
-          projectList: response.data
-        });
-      })
-      .catch(function (error) {
-        console.warn(error);
+  onTermSubmit = async (term: string): Promise<void> => {
+    const value = term;
+    return this.setState({ searchquery: value });
+  };
+
+  async componentDidMount(): Promise<void> {
+    try {
+      const response = await axios.get('/project.json');
+      this.setState({
+        projectList: response.data,
       });
+    } catch (error) {
+      console.warn(error);
+    }
   }
 
   findSearchResults(): never[] {
@@ -64,37 +63,43 @@ export default class App extends React.Component {
           name={project.name}
           description={project.description}
           technologies={project.technologies}
-          link={project.link} />
-      )
-    })
+          link={project.link}
+        />
+      );
+    });
 
     if (projects.length === 0 && this.state.searchquery.length > 0) {
-      return <ProductCard name="No Content For This Search" />
+      return <ProductCard name='No Content For This Search' />;
     }
     return projects;
   }
 
-  render() {
+  render(): JSX.Element {
     return (
-      <div className={this.state.modal ? 'page page--blackout' : 'page'} >
+      <div className={this.state.modal ? 'page page--blackout' : 'page'}>
         <SplashScreen />
-        <div className="page__header">
-          <SearchBar onFormSubmit={this.onTermSubmit} onInputChange={this.onInputChange} visible={false} />
-          <button 
-            className="button button--medium button--color-grey button--text" 
-            type="button" 
-            onClick={() => this.setState({modal: true})}>
+        <div className='page__header'>
+          <SearchBar
+            onFormSubmit={this.onTermSubmit}
+            onInputChange={this.onInputChange}
+            visible={false}
+          />
+          <button
+            className='button button--medium button--color-grey button--text'
+            type='button'
+            onClick={() => this.setState({ modal: true })}
+          >
             <Settings />
           </button>
         </div>
-        <div className="page__sidebar">
+        <div className='page__sidebar'>
           <ProfileCard />
         </div>
-        <div className="page__main">
-          {this.renderProjects()}
-          
-        </div>
-        <SettingModal show={this.state.modal} close={() => this.setState({modal: false})}></SettingModal>
+        <div className='page__main'>{this.renderProjects()}</div>
+        <SettingModal
+          show={this.state.modal}
+          close={() => this.setState({ modal: false })}
+        ></SettingModal>
       </div>
     );
   }

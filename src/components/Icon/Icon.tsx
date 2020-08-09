@@ -6,23 +6,25 @@ interface iconProps {
   isLabel: boolean;
 }
 
-const Icon: FC<iconProps> = ({name, isLabel}) => {
+const Icon: FC<iconProps> = ({ name, isLabel }) => {
   let [img, setImg] = useState('');
-  import (`../../assets/icons/${name}.svg`).then((icon) => {
-    setImg(icon.default);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+  import(`../../assets/icons/${name}.svg`)
+    .then((icon) => {
+      setImg(icon.default);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
 
-  const addWhiteBg = (name.includes('Stencil')) ? 'icon--white-bg': null;
+  // Hack for svg
+  const addWhiteBg = name.includes('Stencil') ? 'icon--white-bg' : null;
 
   return (
     <div className='icon'>
-      <img className={`${addWhiteBg}`}  src={img} alt={name} title={name}></img>
+      <img className={`${addWhiteBg}`} src={img} alt={name} title={name}></img>
       {isLabel ? <p>{name}</p> : null}
     </div>
-  )
-}
+  );
+};
 
 export default Icon;

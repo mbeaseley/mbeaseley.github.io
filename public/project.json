@@ -2,31 +2,63 @@
   {
     "name": "My Spotify Stats",
     "description": "This project is a useful tool for seeing the spotify user top listened to tracks, artists and recently played songs.",
-    "technologies": ["Angular", "Typescript", "Sass", "NPM", "Spotify"],
+    "technologies": [
+      "Angular",
+      "Typescript",
+      "Sass",
+      "NPM",
+      "Spotify",
+      "Github Actions"
+    ],
     "link": "https://mbeaseley.github.io/my-spotify-stats"
   },
   {
     "name": "Project Dashboard",
     "description": "This project is dashboard and home of analysts for any project created by Michael Beaseley. Will display graphical charts relate code smell and much more.",
-    "technologies": ["React", "Typescript", "Sass", "Yarn"],
+    "technologies": [
+      "React",
+      "Typescript",
+      "Sass",
+      "Yarn"
+    ],
     "link": ""
   },
   {
     "name": "CCDesign Web Component Library",
     "description": "This project is my second actual live project in production and my first live NPM package. Purpose of this component library was to improve performance and simplify my Angular 8 website. Easy area on ccdesign.me.uk is comprised of this Web Component Library, from the carsouel to the copy.",
-    "technologies": ["Web Components", "Stencil", "Storybook", "Typescript", "Sass", "Yarn", "Webpack", "Azure", "Azure Pipelines"],
+    "technologies": [
+      "Web Components",
+      "Stencil",
+      "Storybook",
+      "Typescript",
+      "Sass",
+      "Yarn",
+      "Webpack",
+      "Azure",
+      "Azure Pipelines"
+    ],
     "link": "https://mbeaseley.github.io/ccdesigns-components"
   },
   {
     "name": "Personal Website",
     "description": "This project is the first actual live project in production to be viewed. Purpose of my personal website is to act like a CV and a promotion for all further projects created by myself. This project has been through a evolution, using different libraries and packages.",
-    "technologies": ["Angular", "Bootstrap", "Sass", "Contentful", "Azure", "Azure Pipelines", "Yarn"],
+    "technologies": [
+      "Angular",
+      "Bootstrap",
+      "Sass",
+      "Contentful",
+      "Azure",
+      "Azure Pipelines",
+      "Yarn"
+    ],
     "link": "https://ccdesign.me.uk/"
   },
   {
     "name": "University Final Year Project",
     "description": "My final year project at Brunel University was title 'Using Smartphone technology to simulate human behaviour within an indoor environment'.",
-    "technologies": ["Java"],
+    "technologies": [
+      "Java"
+    ],
     "link": "https://assets.ctfassets.net/43i5e5k8e66i/1j26Xbtj2O2EyQ6wEIUggu/924a3bf68c803c3deaf515ea7f1072ea/fyp_uni.pdf"
   }
 ]
