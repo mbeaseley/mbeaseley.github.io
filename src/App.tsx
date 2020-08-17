@@ -3,9 +3,8 @@ import axios from 'axios';
 import SearchBar from './components/SearchBar/SearchBar';
 import ProfileCard from './components/SideBar/SideBar';
 import ProductCard from './components/ProductCard/ProductCard';
-import { ReactComponent as Settings } from './assets/icons/settings.svg';
-import SettingModal from './components/SettingModal/SettingModal';
 import SplashScreen from './components/SplashScreen/SplashScreen';
+import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch';
 
 interface iProp {
   name: string;
@@ -15,7 +14,7 @@ interface iProp {
 }
 
 export default class App extends React.Component {
-  state = { projectList: [], searchquery: '', modal: false };
+  state = { projectList: [], searchquery: '' };
 
   onInputChange = async (term: string): Promise<void> => {
     const value = term;
@@ -76,7 +75,7 @@ export default class App extends React.Component {
 
   render(): JSX.Element {
     return (
-      <div className={this.state.modal ? 'page page--blackout' : 'page'}>
+      <div className='page'>
         <SplashScreen />
         <div className='page__header'>
           <SearchBar
@@ -84,22 +83,12 @@ export default class App extends React.Component {
             onInputChange={this.onInputChange}
             visible={false}
           />
-          <button
-            className='button button--medium button--color-grey button--text'
-            type='button'
-            onClick={() => this.setState({ modal: true })}
-          >
-            <Settings />
-          </button>
+          <ToggleSwitch />
         </div>
         <div className='page__sidebar'>
           <ProfileCard />
         </div>
         <div className='page__main'>{this.renderProjects()}</div>
-        <SettingModal
-          show={this.state.modal}
-          close={() => this.setState({ modal: false })}
-        ></SettingModal>
       </div>
     );
   }

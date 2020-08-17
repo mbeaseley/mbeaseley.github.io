@@ -15,7 +15,8 @@
       width: 12px;
     }
 
-    > label, > input {
+    > label,
+    > input {
       @extend %heading;
       font-size: $font-size--small;
       font-weight: $font-weight;
@@ -35,13 +36,6 @@
       &:focus {
         outline: none;
       }
-    }
-  }
-
-  &__setting {
-    svg {
-      width: 24px;
-      fill: $grey1;
     }
   }
 }
