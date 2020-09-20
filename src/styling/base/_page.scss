@@ -1,38 +1,97 @@
-%containerLayout  {
+%containerLayout {
   display: flex;
   align-items: center;
 }
 
+@mixin theme-light {
+  background-color: $white;
+
+  .page {
+    .splash-screen {
+      background-color: $grey1;
+
+      &__container {
+        color: $black;
+      }
+    }
+    &__header > .search-bar {
+      border-bottom: 1px solid $grey4;
+
+      svg {
+        color: $grey4;
+      }
+
+      input {
+        color: $grey3;
+      }
+    }
+
+    &__sidebar {
+      background-color: $grey1;
+
+      h1,
+      h2 {
+        color: $black;
+      }
+
+      h3 {
+        color: $grey4;
+      }
+
+      hr {
+        border-color: $grey4;
+      }
+    }
+
+    &__main {
+      .product-card {
+        background-color: $grey1;
+
+        &__name {
+          color: $black;
+        }
+
+        &__description {
+          color: $black;
+        }
+
+        &__technologies {
+          p {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin dark-theme {
+  background-color: $navy;
+
+  &__sidebar {
+    background-color: $dark-blue;
+  }
+}
+
 .page {
+  @include dark-theme;
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 6vh auto;
   grid-template-areas:
-      'header'
-      'main';
-  background-color: $navy;
+    'header'
+    'main';
 
-  &--blackout {
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: $black;
-      opacity: 0.7;
-    }
+  &--light {
+    @include theme-light;
   }
 
-  &__header { 
+  &__header {
     @extend %containerLayout;
     display: flex;
     justify-content: space-between;
-    grid-area: header; 
+    grid-area: header;
     padding: $space $space-xl;
 
     @media screen and (max-width: $screen-xs-max) {
@@ -49,9 +108,8 @@
   }
   &__sidebar {
     @extend %containerLayout;
-    background-color: $dark-blue;
     border-right: 3px solid $black;
-    grid-area: menu; 
+    grid-area: menu;
     display: none;
     box-shadow: none;
     padding: 20px;
@@ -60,7 +118,7 @@
       height: 100%;
     }
   }
-  &__main { 
+  &__main {
     grid-area: main;
     padding: 10px;
     overflow: scroll;
@@ -71,7 +129,6 @@
       font: 400 14px Arial, Helvetica, sans-serif;
       color: $grey1;
       text-align: center;
-      
     }
   }
   @media (min-width: $screen-sm-min) {
@@ -81,7 +138,7 @@
       'menu header'
       'menu main';
 
-    &__sidebar { 
+    &__sidebar {
       display: unset;
     }
   }

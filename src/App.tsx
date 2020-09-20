@@ -15,6 +15,14 @@ interface iProp {
 
 export default class App extends React.Component {
   state = { projectList: [], searchquery: '' };
+  firstLoad: boolean = true;
+  theme: boolean = false;
+  page: any;
+
+  constructor(props: any) {
+    super(props);
+    this.page = React.createRef();
+  }
 
   onInputChange = async (term: string): Promise<void> => {
     const value = term;
@@ -73,9 +81,23 @@ export default class App extends React.Component {
     return projects;
   }
 
+  async handleToggleEvent(active: boolean): Promise<void> {
+    const page = this.page.current.classList;
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    active
+      ? page.add('page--light')
+      : !active && !this.firstLoad
+      ? page.remove('page--light')
+      : null;
+
+    this.theme = active;
+    this.firstLoad = false;
+  }
+
   render(): JSX.Element {
     return (
-      <div className='page'>
+      <div className='page' ref={this.page}>
         <SplashScreen />
         <div className='page__header'>
           <SearchBar
@@ -83,7 +105,7 @@ export default class App extends React.Component {
             onInputChange={this.onInputChange}
             visible={false}
           />
-          <ToggleSwitch />
+          <ToggleSwitch handleClick={(res: boolean) => this.handleToggleEvent(res)} />
         </div>
         <div className='page__sidebar'>
           <ProfileCard />

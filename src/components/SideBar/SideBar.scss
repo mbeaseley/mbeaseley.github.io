@@ -3,21 +3,6 @@
 .sidebar {
   height: 100%;
 
-  &--blackout {
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: $black;
-      opacity: 0.7;
-    }
-  }
-
   &__container {
     position: relative;
     height: 100%;
@@ -42,7 +27,8 @@
     }
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     font-size: $font-size--extra-small;
     text-align: center;
     margin: 0;
@@ -67,14 +53,14 @@
     bottom: 0;
 
     &--icons {
-      display:table;
-      width:100%;
+      display: table;
+      width: 100%;
       table-layout: fixed;
       color: $grey3;
 
       > * {
-        display:table-cell;
-        text-align:center;
+        display: table-cell;
+        text-align: center;
       }
 
       svg {

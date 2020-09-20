@@ -1,6 +1,8 @@
 @import '../../styling/variables';
 
 hr {
-  border: 1px solid $grey3;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey3;
   margin: 10px 0;
 }

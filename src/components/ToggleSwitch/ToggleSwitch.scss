@@ -23,7 +23,7 @@
     justify-content: space-between;
     cursor: pointer;
     width: 55px;
-    height: 30px;
+    height: 29px;
     background: $dark-blue;
     border: 3px solid $black;
     border-radius: 100px;
@@ -44,7 +44,7 @@
     }
 
     &:active span {
-      width: 60px;
+      width: 50px;
     }
   }
 }
