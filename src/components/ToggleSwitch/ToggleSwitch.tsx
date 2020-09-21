@@ -3,15 +3,26 @@ import './ToggleSwitch.scss';
 
 export default class ToggleSwitch extends Component<any, any> {
   state = { active: false };
-  firstLoad: boolean = false;
+  firstLoad: boolean = true;
 
-  async onInputChange(): Promise<void> {
-    return this.setState({ active: !this.state.active });
+  async onInputChange(event: any): Promise<void> {
+    localStorage.setItem('cc:colorTheme', event.target.checked);
+    debugger;
+    return this.setState({ active: event.target.checked });
+  }
+
+  UNSAFE_componentWillMount(): void {
+    const res = localStorage.getItem('cc:colorTheme');
+    const value = res === 'true' ? true : false;
+    debugger;
+    if (value !== this.state.active) {
+      this.setState({ active: value });
+    }
   }
 
   componentDidUpdate(): void {
-    if (!this.firstLoad) {
-      this.firstLoad = true;
+    if (this.firstLoad) {
+      this.firstLoad = false;
       return;
     }
 
@@ -24,6 +35,7 @@ export default class ToggleSwitch extends Component<any, any> {
         <input
           className='toggle__switch'
           id={`switch`}
+          defaultChecked={this.state.active}
           onChange={this.onInputChange.bind(this)}
           type='checkbox'
         />

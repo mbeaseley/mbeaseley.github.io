@@ -3,17 +3,13 @@
   align-items: center;
 }
 
+/*
+* LIGHT PAGE THEME COLOURING
+*/
 @mixin theme-light {
   background-color: $white;
 
   .page {
-    .splash-screen {
-      background-color: $grey1;
-
-      &__container {
-        color: $black;
-      }
-    }
     &__header > .search-bar {
       border-bottom: 1px solid $grey4;
 
@@ -36,6 +32,10 @@
 
       h3 {
         color: $grey4;
+      }
+
+      img {
+        border: 3px solid $black;
       }
 
       hr {
@@ -63,8 +63,19 @@
       }
     }
   }
+
+  .splash-screen {
+    background-color: $grey1;
+
+    &__container {
+      color: $black;
+    }
+  }
 }
 
+/*
+* DARK PAGE THEME COLOURING
+*/
 @mixin dark-theme {
   background-color: $navy;
 
@@ -73,6 +84,9 @@
   }
 }
 
+/*
+* PAGE SCSS
+*/
 .page {
   @include dark-theme;
   height: 100vh;

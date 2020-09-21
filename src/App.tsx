@@ -83,21 +83,17 @@ export default class App extends React.Component {
 
   async handleToggleEvent(active: boolean): Promise<void> {
     const page = this.page.current.classList;
-
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    active
-      ? page.add('page--light')
-      : !active && !this.firstLoad
-      ? page.remove('page--light')
-      : null;
+    active ? page.add('page--light') : page.remove('page--light');
 
     this.theme = active;
-    this.firstLoad = false;
   }
 
   render(): JSX.Element {
+    const value = localStorage.getItem('cc:colorTheme');
+    this.theme = value === 'true' ? true : false;
+
     return (
-      <div className='page' ref={this.page}>
+      <div className={this.theme ? 'page page--light' : 'page'} ref={this.page}>
         <SplashScreen />
         <div className='page__header'>
           <SearchBar
