@@ -7,14 +7,13 @@ export default class ToggleSwitch extends Component<any, any> {
 
   async onInputChange(event: any): Promise<void> {
     localStorage.setItem('cc:colorTheme', event.target.checked);
-    debugger;
     return this.setState({ active: event.target.checked });
   }
 
   UNSAFE_componentWillMount(): void {
     const res = localStorage.getItem('cc:colorTheme');
     const value = res === 'true' ? true : false;
-    debugger;
+
     if (value !== this.state.active) {
       this.setState({ active: value });
     }
