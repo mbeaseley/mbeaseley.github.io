@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/icons/aws.svg"],"names":["module","exports"],"mappings":"oHAAAA,EAAOC,QAAU,IAA0B","file":"static/js/4.ddf006d8.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/aws.65750278.svg\";"],"sourceRoot":""}
