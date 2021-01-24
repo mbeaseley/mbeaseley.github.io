@@ -12,6 +12,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
+To run this command, you will need to create a ssl certificate. Follow this guide:
+
+```
+# Install mkcert tool
+brew install mkcert
+
+# Install nss (only needed if you use Firefox)
+brew install nss
+
+# Setup mkcert on your machine (creates a CA)
+mkcert -install
+
+# Create .cert directory if it doesn't exist
+mkdir -p .cert
+
+# Generate the certificate (ran from the root of this project)
+mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem "localhost"
+```
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
@@ -42,3 +61,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+```
+
+```
