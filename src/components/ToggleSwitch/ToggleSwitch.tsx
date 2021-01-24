@@ -3,7 +3,7 @@ import './ToggleSwitch.scss';
 
 export default class ToggleSwitch extends Component<any, any> {
   state = { active: false };
-  firstLoad: boolean = true;
+  firstLoad = true;
 
   async onInputChange(event: any): Promise<void> {
     localStorage.setItem('cc:colorTheme', event.target.checked);

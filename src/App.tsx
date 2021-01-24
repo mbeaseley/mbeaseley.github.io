@@ -9,17 +9,17 @@ import ToggleSwitch from './components/ToggleSwitch/ToggleSwitch';
 interface iProp {
   name: string;
   description: string;
-  technologies: any;
+  technologies: string[];
   link: string;
 }
 
 export default class App extends React.Component {
   state = { projectList: [], searchquery: '' };
-  firstLoad: boolean = true;
-  theme: boolean = false;
-  page: any;
+  firstLoad = true;
+  theme = false;
+  page: React.RefObject<any>;
 
-  constructor(props: any) {
+  constructor(props: iProp) {
     super(props);
     this.page = React.createRef();
   }

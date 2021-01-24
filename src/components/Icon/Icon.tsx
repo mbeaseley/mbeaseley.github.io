@@ -1,13 +1,16 @@
 import React, { FC, useState } from 'react';
 import './Icon.scss';
 
-interface iconProps {
+interface IconProps {
   name: string;
   isLabel: boolean;
 }
 
-const Icon: FC<iconProps> = ({ name, isLabel }) => {
-  let [img, setImg] = useState('');
+const Icon: FC<IconProps> = (props: IconProps) => {
+  const [img, setImg] = useState('');
+  const name = props.name;
+  const isLabel = props.isLabel;
+
   import(`../../assets/icons/${name}.svg`)
     .then((icon) => {
       setImg(icon.default);
@@ -17,7 +20,7 @@ const Icon: FC<iconProps> = ({ name, isLabel }) => {
     });
 
   // Hack for svg
-  const addWhiteBg = name.includes('Stencil') ? 'icon--white-bg' : null;
+  const addWhiteBg = props.name.includes('Stencil') ? 'icon--white-bg' : undefined;
 
   return (
     <div className='icon'>

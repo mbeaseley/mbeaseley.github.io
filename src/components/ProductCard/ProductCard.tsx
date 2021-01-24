@@ -5,20 +5,16 @@ import Icon from '../Icon/Icon';
 interface iProp {
   name: string;
   description?: string;
-  technologies?: any;
+  technologies?: string[];
   link?: string;
 }
 
-interface iconProps {
-  name: string;
-}
-
-export default class ProductCard extends Component<iProp, any> {
-  renderIcon(): React.FC<iconProps> | null {
+export default class ProductCard extends Component<iProp, []> {
+  renderIcon(): JSX.Element[] | null {
     if (!this.props.technologies) {
       return null;
     }
-    const icons = this.props.technologies.map((icon: iconProps, index: number) => {
+    const icons = this.props.technologies.map((icon: string, index: number) => {
       const iconName = icon.toString().toLowerCase().replace(/ /g, '-');
       return <Icon key={index} name={iconName} isLabel={true} />;
     });
